@@ -7,5 +7,3 @@
 
 
 I use Wndows
-
-ты работаешь в cmd

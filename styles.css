@@ -42,6 +42,10 @@ img {
   height: auto;
 }
 
+picture {
+  display: block;
+}
+
 .site-header {
   position: sticky;
   top: 0;

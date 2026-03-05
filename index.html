@@ -43,7 +43,11 @@
           </div>
         </div>
         <figure class="hero-photo">
-          <img src="images/photo1.jpg" alt="Ирина Садовская, инструктор Aplomb" fetchpriority="high" />
+          <picture>
+            <source srcset="images/photo1.avif" type="image/avif" />
+            <source srcset="images/photo1.webp" type="image/webp" />
+            <img src="images/photo1.jpg" alt="Ирина Садовская, инструктор Aplomb" fetchpriority="high" />
+          </picture>
         </figure>
       </section>
 
@@ -121,7 +125,11 @@
         </div>
         <figure class="certificate-card">
           <a href="images/cert.jpg" target="_blank" rel="noopener">
-            <img src="images/cert.jpg" alt="Сертификат инструктора методики Aplomb" loading="lazy" />
+            <picture>
+              <source srcset="images/cert.avif" type="image/avif" />
+              <source srcset="images/cert.webp" type="image/webp" />
+              <img src="images/cert.jpg" alt="Сертификат инструктора методики Aplomb" loading="lazy" />
+            </picture>
           </a>
           <figcaption>Нажмите на изображение, чтобы открыть сертификат в полном размере.</figcaption>
         </figure>

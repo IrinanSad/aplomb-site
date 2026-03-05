@@ -55,8 +55,19 @@ function buildGallery() {
   if (!grid) return;
 
   content.galleryImages.forEach(({ src, alt }) => {
+    const base = src.replace(/\.(jpe?g)$/i, "");
     const figure = document.createElement("figure");
     figure.className = "gallery-item";
+
+    const picture = document.createElement("picture");
+
+    const avifSource = document.createElement("source");
+    avifSource.srcset = `${base}.avif`;
+    avifSource.type = "image/avif";
+
+    const webpSource = document.createElement("source");
+    webpSource.srcset = `${base}.webp`;
+    webpSource.type = "image/webp";
 
     const img = document.createElement("img");
     img.src = src;
@@ -64,7 +75,8 @@ function buildGallery() {
     img.loading = "lazy";
     img.decoding = "async";
 
-    figure.appendChild(img);
+    picture.append(avifSource, webpSource, img);
+    figure.appendChild(picture);
     grid.appendChild(figure);
   });
 }
