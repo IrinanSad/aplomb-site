@@ -61,11 +61,27 @@ picture {
 }
 
 .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--text);
   font-family: "Literata", Georgia, serif;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 700;
   text-decoration: none;
   letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.brand-logo {
+  width: auto;
+  height: 80px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.brand-text {
+  display: inline-block;
 }
 
 .main-nav {
